@@ -1,0 +1,41 @@
+{
+  "name": "vs-translate",
+  "displayName": "Translate Extension",
+  "description": "Translates highlighted text to desired language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.translateText",
+        "title": "Translate Text"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:extension.translateText"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5",
+    "vscode": "^1.1.37",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
+    "axios": "^1.7.2",
+    "node-fetch": "^3.3.2"
+  }
+}
