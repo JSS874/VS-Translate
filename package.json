@@ -2,7 +2,7 @@
   "name": "vs-translate",
   "displayName": "VS Translate Extension",
   "description": "Translates highlighted text to desired language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.63.0"
   },
